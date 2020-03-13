@@ -6,9 +6,11 @@ Bare bones Symfony 5.0.5 installation with docker environment for testing.
 
 Docker containers:
 
-* symfony5_web_1 - nginx 1.10 web server
-* symfony5_php - PHP FPM 7.4
-* symfony5_database_1 - MySQL 5.7 database server
+Container|Content
+---------|-------
+symfony5_web_1|nginx 1.10 web server
+symfony5_php|PHP FPM 7.4
+symfony5_database_1|MySQL 5.7 database server
 
 ## Installation
 
@@ -18,8 +20,10 @@ Docker containers:
 
 2. Copy the *.env.dist* file to *.env* in the root folder. This .env files can be edited to suit your environment, though the default settings should suffice.
 
-`cd symfony5`
-`cp .env.dist .env`
+```
+cd symfony5
+cp .env.dist .env
+```
 
 3. Run `make dev-run` to bring up the containers. If there are port conflict errors, edit the appropriate settings in your root-level *.env* file and try again.
 
