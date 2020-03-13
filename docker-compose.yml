@@ -1,0 +1,38 @@
+version: '2'
+services:
+
+  php:
+    build:
+      context: ./docker/php
+    container_name: symfony5_php
+    working_dir: /var/www
+    volumes:
+      - .:/var/www:cached
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=database"
+
+  web:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    working_dir: /var/www
+    volumes_from:
+      - php
+    ports:
+      - 8005:80
+
+  database:
+    image: mysql:5.7
+    volumes:
+      - dbdata:/var/lib/mysql:cached
+    environment:
+      - "MYSQL_DATABASE=symfony5"
+      - "MYSQL_USER=symfony5"
+      - "MYSQL_PASSWORD=secret"
+      - "MYSQL_ROOT_PASSWORD=secret"
+    ports:
+      - "33306:3306"
+
+volumes:
+  dbdata:
