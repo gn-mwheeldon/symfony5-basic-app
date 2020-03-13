@@ -18,9 +18,12 @@ Docker containers:
 
 2. Copy the *.env.dist* file to *.env* in the root folder. This .env files can be edited to suit your environment, though the default settings should suffice.
 
+`cd symfony5`
+`cp .env.dist .env`
+
 3. Run `make dev-run` to bring up the containers. If there are port conflict errors, edit the appropriate settings in your root-level *.env* file and try again.
 
-4. Execute `make dev-sh` to shell into the PHP container and run `composer install` within the */var/www* folder. Use `exit` to exit the container shell.
+4. Execute `make dev-ci` to shell into the PHP container and run `composer install`. Use `exit` to exit the container shell.
 
 ## Usage
 
