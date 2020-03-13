@@ -9,7 +9,7 @@ Docker containers:
 Container|Content
 ---------|-------
 symfony5_web_1|nginx 1.10 web server
-symfony5_php|PHP FPM 7.4
+symfony5_php|PHP 7.4 FPM 
 symfony5_database_1|MySQL 5.7 database server
 
 ## Installation
