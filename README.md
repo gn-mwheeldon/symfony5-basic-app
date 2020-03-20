@@ -2,7 +2,7 @@
 
 ## What is it?
 
-Bare bones Symfony 5.0.5 installation with docker environment for testing.
+Bare bones Symfony 5.0.5 user app with docker environment for testing.
 
 Docker containers:
 
